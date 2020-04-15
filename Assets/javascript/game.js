@@ -10,8 +10,16 @@ var computerChoices = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','
 // Creating variables to hold the number of wins, losses, and remaining. 
 var wins = 0;
 var losses = 0;
+//these three reset
 var remaining = 10;
+var guesses = [];
+var computerLetter = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
+function reset(){
+ remaining = 10;
+ guesses = [];
+ computerLetter = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+}
 // Create variables that hold references to the places in the HTML where we want to display things.
 
 var winsNumber = document.getElementById("wins");
@@ -22,27 +30,35 @@ var guessesSoFar = document.getElementById("guessesSoFar");
 // This function is run whenever the user presses a key.
 
 document.onkeyup = function(event){
+
+    //ICEBOX input validation (look into ascii2 keycodes?)
 // Determines which key was pressed.
 var userGuess = event.key;
 
 // Randomly chooses a choice from the computerChoices array. This is the Computer's letter.
-var computerLetter = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
 //This logic determines the outcome of the key pressed (win/loss)=, and increments the appropriate number
 
 if(userGuess === computerLetter){
-    wins++}
+    wins++
+reset()}
 
 if(userGuess != computerLetter){
-    losses++;
     remaining--;
+    if(remaining==0){
+        console.log("YUO LOSE")
+        losses++;
+        reset()
+    }
+    for (var i = 0; i < 10; i++);
     //include listing out guessesSoFar 
 }
 
 //Display wins/losses/guesses reamining
 winsNumber.textContent = wins;
-lossesNumber.textContent = + losses;
-
+lossesNumber.textContent = losses;
+remainingNumber.textContent = remaining;
+guessesSoFar = 
 
 
 
