@@ -15,12 +15,15 @@ var remaining = 10;
 var guesses = [];
 var computerLetter = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
+// This function resets the game
 function reset(){
  remaining = 10;
  guesses = [];
  computerLetter = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 }
-// Create variables that hold references to the places in the HTML where we want to display things.
+
+
+// Creates variables that hold references to the places in the HTML where we want to display things.
 
 var winsNumber = document.getElementById("wins");
 var lossesNumber = document.getElementById("losses");
@@ -41,29 +44,32 @@ var userGuess = event.key;
 
 if(userGuess === computerLetter){
     wins++
-reset()}
+reset()
+}
 
 if(userGuess != computerLetter){
     remaining--;
+    guesses.push(userGuess);
     if(remaining==0){
-        console.log("YUO LOSE")
+        console.log("YOU LOSE")
         losses++;
+        // guesses = [];
         reset()
     }
-    for (var i = 0; i < 10; i++);
-    //include listing out guessesSoFar 
+   //include listing out guessesSoFar 
 }
 
 //Display wins/losses/guesses reamining
 winsNumber.textContent = wins;
 lossesNumber.textContent = losses;
 remainingNumber.textContent = remaining;
-guessesSoFar = 
+guessesSoFar.textContent = guesses.join (", ");
 
 
 
 console.log(userGuess);
 console.log(computerLetter);
+
 }
 
 
