@@ -1,6 +1,4 @@
 
-// var secretLetter = ""; //computer 
-// var guesses = [];
 
 
 // Creates an array that lists out all of the options in the alphabet
@@ -74,37 +72,39 @@ console.log(computerLetter);
 
 
 
+///Attempt at ascii 2
+// source: https://www.w3resource.com/javascript/form/all-letters-field.php //
+
+// document.addEventListener("keyup", function(event) {
+//     console.log(event.which);
+//   })
 
 
 
+  // uppercase acii is 65-90; lowercase acii is 97 - 122//
+//   if (userGuess >= 65 && <=90 || >=97 && <=122 )
 
 
+  // source: https://www.includehelp.com/code-snippets/allow-only-alphabets-in-input-field-in-javascript.aspx //
 
+//   <input type="text" name="fullName" onkeypress="return (event.charCode > 64 && 
+//     event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" 
+//     placeholder="Full Name">
 
-//Declarations: 
 
   
-  // Function to generate random number  
- 
-// var secretLetter = "";
-// var alphabet = "abcdefghijklmnopqrstuvwxyz";
-// function getRandomLetter() {
-//   return alphabet[Math.floor(Math.random() * alphabet.length)];
-// }
-// var randomLetter;
-
-// while (secretLetter.length < 1) {
-//   randomLetter = getRandomLetter();
-//   secretLetter += randomLetter;
-// } 
-// console.log(secretLetter);         
-    
+// source: https://stackoverflow.com/questions/19849189/js-function-to-allow-enter-only-letters-and-white-spaces
 
 
 
-// Function Calls:
 
-// functionName()
+
+
+//   (keycode
+//     (keyCode < 65 || keyCode > 90) && 
+//     (keyCode < 97 || keyCode > 123))
+    // keyCode != 32 && 
+    // keyCode != 39) 
 
 
 
@@ -117,15 +117,11 @@ console.log(computerLetter);
 
 
 
-// Logging number of remaining guesses
-// for (i=0; i<9; i++){
-//     console.log(i)
-// }
 
 
-// document.onkeyup = function (event){
-//     var userGuess = event.key; // user guess
-// }
+
+
+
 
 
 
@@ -138,10 +134,5 @@ console.log(computerLetter);
       // if not equal increase loss
 // 5. decrease guesses left
 // 6. populate letters guessed so far
-
-
-
-
-
 
 // .push is an element to prompt an array}
