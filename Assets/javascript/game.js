@@ -19,7 +19,8 @@ function reset() {
     computerLetter = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 }
 
-
+ //Display wins/losses/guesses reamining
+//  winsNumber.textContent = wins;
 // Creates variables that hold references to the places in the HTML where we want to display things.
 
 var winsNumber = document.getElementById("wins");

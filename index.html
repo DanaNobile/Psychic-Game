@@ -4,33 +4,109 @@
 <head>
     <meta charset="UTF-8">
     <title>Psychic Game</title>
+    <!-- Reset  -->
     <link rel="stylesheet" href="Assets/css/reset.css">
+    <!-- JQuery for Bootstrap Use -->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <!-- Bootstrap  Stylesheet-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- Bootstrap Min  -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="Assets/css/style.css">
 </head>
 
 <body>
 
     <h1>The Psychic Game</h1>
-    <div class="contentBox">
-        <h2>Guess what letter I'm thinking of?</h2>
-        <p id="userGuess"></p>
+    <div class="container-contentBox">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Guess what letter I'm thinking of?</h2>
+                <h3>Start typing letters to begin. Your score will automatically tally, and your guessed letters will be
+                    displayed below.</h3>
+                <p id="userGuess"></p>
+            </div>
+        </div>
 
-        <h2>Wins:</h2>
-        <p id="wins"> 0</p>
+        <div class="cards">
+            <div class="row">
 
-        <h2>Losses:</h2>
-        <p id="losses"> 0</p>
 
-        <h2>Guesses Left:</h2>
-        <p id="remaining"> 10</p>
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top image-card" src="./Assets/images/psychic1.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Wins</h5>
+                            <p class="card-text" id="wins">0</p>
 
-        <h2>Your Guesses so far:</h2>
-        <p id="guessesSoFar"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top image-card" src="./Assets/images/psychic2.jpg" alt="Card image cap">
+                        <div class="card-body">
+
+                            <h5 class="card-title">Loses</h5>
+                            <p class="card-text" id="losses">0
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card " style="width: 18rem;">
+                        <img class="card-img-top image-card" src="./Assets/images/psychic3.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Guesses Left</h5>
+                            <p class="card-text" id="remaining">0</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="row">
+            <div class="col-md-12">
+                <h2>Wins:</h2>
+                <p id="wins"> 0</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Losses:</h2>
+                <p id="losses"> 0</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Guesses Left:</h2>
+                <p id="remaining"> 10</p>
+            </div>
+        </div> -->
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Your Guesses so far:</h2>
+                <p id="guessesSoFar"></p>
+            </div>
+        </div>
+
     </div>
 
 
-    <script defer src="Assets/javascript/game.js"></script>
 
+    <script defer src="Assets/javascript/game.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </body>
 
 </html>
